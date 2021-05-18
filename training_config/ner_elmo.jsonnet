@@ -27,8 +27,10 @@
      }
     }
   },
-  "train_data_path": std.extVar("NER_TRAIN_DATA_PATH"),
-  "validation_data_path": std.extVar("NER_TEST_A_PATH"),
+  "train_data_path": "~/data/nerc-conll2003/eng.train",
+  "validation_data_path": "~/data/nerc-conll2003/eng.testa",
+  "test_data_path": "~/data/nerc-conll2003/eng.testb",
+  "evaluate_on_test": true,
   "model": {
     "type": "crf_tagger",
     "label_encoding": "BIOUL",
@@ -44,8 +46,8 @@
         },
         "elmo":{
             "type": "elmo_token_embedder",
-        "options_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json",
-        "weight_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5",
+            "options_file": "~/model/elmo/options.json",
+            "weight_file": "~/model/elmo/weights.hdf5",
             "do_layer_norm": false,
             "dropout": 0.0
         },
