@@ -15,9 +15,10 @@
     },
     "max_span_width": 10
   },
-  "train_data_path": std.extVar("COREF_TRAIN_DATA_PATH"),
-  "validation_data_path": std.extVar("COREF_DEV_DATA_PATH"),
-  "test_data_path": std.extVar("COREF_TEST_DATA_PATH"),
+  "train_data_path": "~/data/coref-conll2012/train.english.v5_gold_conll",
+  "validation_data_path": "~/data/coref-conll2012/dev.english.v5_gold_conll",
+  "test_data_path": "~/data/coref-conll2012/test.english.v5_gold_conll",
+  "evaluate_on_test": true,
   "model": {
     "type": "coref",
     "text_field_embedder": {

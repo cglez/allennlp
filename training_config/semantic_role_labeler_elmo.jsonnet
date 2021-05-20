@@ -7,8 +7,10 @@
             }
         }
     },
-    "train_data_path": std.extVar('SRL_TRAIN_DATA_PATH'),
-    "validation_data_path": std.extVar('SRL_VALIDATION_DATA_PATH'),
+    "train_data_path": "~/data/coref-conll2012/train.english.v5_gold_conll",
+    "validation_data_path": "~/data/coref-conll2012/dev.english.v5_gold_conll",
+    "test_data_path": "~/data/coref-conll2012/test.english.v5_gold_conll",
+    "evaluate_on_test": true,
     "model": {
         "type": "srl",
         "text_field_embedder": {

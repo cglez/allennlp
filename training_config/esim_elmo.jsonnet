@@ -18,6 +18,8 @@
   },
   "train_data_path": "https://allennlp.s3.amazonaws.com/datasets/snli/snli_1.0_train.jsonl",
   "validation_data_path": "https://allennlp.s3.amazonaws.com/datasets/snli/snli_1.0_dev.jsonl",
+  "test_data_path": "https://allennlp.s3.amazonaws.com/datasets/snli/snli_1.0_test.jsonl",
+  "evaluate_on_test": true,
   "model": {
     "type": "esim",
     "dropout": 0.5,
@@ -25,8 +27,8 @@
       "token_embedders": {
         "elmo":{
             "type": "elmo_token_embedder",
-        "options_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json",
-        "weight_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5",
+            "options_file": "~/model/elmo/options.json",
+            "weight_file": "~/model/elmo/weights.hdf5",
             "do_layer_norm": false,
             "dropout": 0.0
         }
