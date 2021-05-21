@@ -1,7 +1,15 @@
 // Configuration for a semantic role labeler model based on:
 //   He, Luheng et al. “Deep Semantic Role Labeling: What Works and What's Next.” ACL (2017).
 {
-  "dataset_reader":{"type":"srl"},
+  "dataset_reader": {
+    "type": "srl",
+    "token_indexers": {
+      "tokens": {
+        "type": "single_id",
+        "lowercase_tokens": true
+      }
+    }
+  },
   "train_data_path": "~/data/conll-formatted-ontonotes-5.0/data/train",
   "validation_data_path": "~/data/conll-formatted-ontonotes-5.0/data/development",
   "test_data_path": "~/data/conll-formatted-ontonotes-5.0/data/test",
@@ -28,7 +36,7 @@
     ],
     "encoder": {
       "type": "alternating_lstm",
-      "input_size": 200,
+      "input_size": 100,
       "hidden_size": 300,
       "num_layers": 8,
       "recurrent_dropout_probability": 0.1,

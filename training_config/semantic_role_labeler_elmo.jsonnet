@@ -7,9 +7,9 @@
             }
         }
     },
-    "train_data_path": "~/data/coref-conll2012/train.english.v5_gold_conll",
-    "validation_data_path": "~/data/coref-conll2012/dev.english.v5_gold_conll",
-    "test_data_path": "~/data/coref-conll2012/test.english.v5_gold_conll",
+    "train_data_path": "~/data/conll-formatted-ontonotes-5.0/data/train",
+    "validation_data_path": "~/data/conll-formatted-ontonotes-5.0/data/development",
+    "test_data_path": "~/data/conll-formatted-ontonotes-5.0/data/test",
     "evaluate_on_test": true,
     "model": {
         "type": "srl",
@@ -17,8 +17,8 @@
             "token_embedders": {
                 "elmo": {
                     "type": "elmo_token_embedder",
-                    "options_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_options.json",
-                    "weight_file": "https://allennlp.s3.amazonaws.com/models/elmo/2x4096_512_2048cnn_2xhighway/elmo_2x4096_512_2048cnn_2xhighway_weights.hdf5",
+                    "options_file": "~/model/elmo/options.json",
+                    "weight_file": "~/model/elmo/weights.hdf5",
                     "do_layer_norm": false,
                     "dropout": 0.1
                 }
